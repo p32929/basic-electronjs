@@ -1,0 +1,58 @@
+{
+  "name": "pnet",
+  "version": "1.0.2",
+  "description": "pnet",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^11.0.3",
+    "electron-builder": "^22.7.0"
+  },
+  "build": {
+    "appId": "PNET",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "images/favicon.png",
+      "publisherName": "Fayaz Bin Salam"
+    }
+  },
+  "dependencies": {
+    "dialogs": "^2.0.1",
+    "electron-reload": "^1.5.0"
+  }
+}
